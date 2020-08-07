@@ -13,7 +13,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 
 func bye(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("bye!!!")
-	fmt.Fprintf(w, "hello\n")
+	fmt.Fprintf(w, "bye\n")
 }
 
 func exit(w http.ResponseWriter, req *http.Request) {
