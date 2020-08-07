@@ -8,21 +8,11 @@ import (
 
 func hello(w http.ResponseWriter, req *http.Request) {
 	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
 	fmt.Fprintf(w, "hello\n")
 }
 
 func bye(w http.ResponseWriter, req *http.Request) {
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
-	fmt.Println("hello world!!!")
+	fmt.Println("bye!!!")
 	fmt.Fprintf(w, "hello\n")
 }
 
