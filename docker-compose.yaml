@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  autorunpoc:
+    container_name: autorunpoc
+    image: dev681999/autorunpoc
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - 8090:8090
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${HOME}/.docker/config.json:/config.json
+    command: autorunpoc --debug --http-api --interval 30 --trace
+    # command: autorunpoc --debug --interval 30 --trace
+    environment:
+      - WATCHTOWER_HTTP_API_TOKEN=mytoken
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
+    ports:
+      - 8000:8080
