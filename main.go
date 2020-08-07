@@ -16,6 +16,11 @@ func bye(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "bye\n")
 }
 
+func yolo(w http.ResponseWriter, req *http.Request) {
+	fmt.Println("yolo!!!")
+	fmt.Fprintf(w, "yolo\n")
+}
+
 func exit(w http.ResponseWriter, req *http.Request) {
 	os.Exit(-1)
 }
@@ -31,6 +36,7 @@ func headers(w http.ResponseWriter, req *http.Request) {
 func main() {
 	http.HandleFunc("/hello", hello)
 	http.HandleFunc("/bye", bye)
+	http.HandleFunc("/yolo", yolo)
 	http.HandleFunc("/exit", exit)
 	http.HandleFunc("/headers", headers)
 

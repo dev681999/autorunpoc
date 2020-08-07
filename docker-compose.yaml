@@ -3,7 +3,7 @@ version: '3'
 services:
   autorunpoc:
     container_name: autorunpoc
-    image: dev681999/autorunpoc
+    image: docker.pkg.github.com/dev681999/autorunpoc/autorunpoc:latest
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     ports:
