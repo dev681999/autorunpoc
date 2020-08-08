@@ -57,4 +57,4 @@ jobs:
         #   args: |
         #     -H "Token: mytoken" ${{ secrets.REMOTE_URL }}/v1/update
         run: |
-          curl --silent --show-error --fail -H "Token: mytoken" ${{ secrets.REMOTE_URL }}/v1/update
+          curl --silent --show-error --fail -H "Token: ${{ secrets.WEBHOOK_TOKEN }}" ${{ secrets.WEBHOOK_URL }}/v1/update
