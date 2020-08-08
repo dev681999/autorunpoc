@@ -52,5 +52,9 @@ jobs:
           docker push $IMAGE_ID:$VERSION
 
       - name: Trigger Update
-        run: |
-          curl -H "Token: mytoken" ${{ secrets.REMOTE_URL }}/v1/update
+        uses: wei/curl@master
+        with:
+          args: |
+            -H "Token: mytoken" ${{ secrets.REMOTE_URL }}/v1/update
+        # run: |
+        #   curl -H "Token: mytoken" ${{ secrets.REMOTE_URL }}/v1/update
