@@ -2,10 +2,10 @@ name: TEST
 
 on:
   # push:
-    # Publish `master` as Docker `latest` image.
+  # Publish `master` as Docker `latest` image.
   release:
-    types: [published]
-
+    types:
+      - created
 
 env:
   IMAGE_NAME: autorunpoc
