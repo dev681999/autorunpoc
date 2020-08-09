@@ -3,7 +3,7 @@ name: TEST
 on:
   push:
     tags:
-      - master/[1-9]+.[0-9]+.[0-9]+
+      - v[1-9]+.[0-9]+.[0-9]+
 
 env:
   IMAGE_NAME: autorunpoc
